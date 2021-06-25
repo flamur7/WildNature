@@ -8,6 +8,10 @@
     <link rel="icon" href="img/logo.PNG">
     <link rel="stylesheet" type="text/css" href="css/forIndex.css">
     <link rel="stylesheet" type="text/css" href="css/forBirds.css">
+    <script type="text/javascript" src="js/lightbox-plus-jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/lightbox.min.css">
+    
 </head>
 <body>
     <div id="header" class="flex">
@@ -17,14 +21,44 @@
             </div>
             <div class="menu">
                 <ul>
-                    <a href="index.html"><li class="selected">Homepage</li></a>
+                    <a href="index.html"><li>Homepage</li></a>
                     <a href="animals.html"><li>Animals</li></a>
                     <a href="plants.html"><li>Plants</li></a>
-                    <a href="birds.html"><li>Birds</li></a>
+                    <a href="birds.html"><li class="selected">Birds</li></a>
                     <a href="gallery.html"><li>Gallery</li></a>
                     <a href="about.html"><li>About</li></a>
                 </ul>
             </div>
+        </div>
+    </div>
+
+    <div id="content">
+        <div class="hije-top" style="opacity: 50%;">
+            <marquee scrollamount="10" direction="left">
+                <p style="font-size: larger;font-style: italic;font-weight: bold;">Wild true, but it's best part of the world! Enjoy the time on our website</p>       
+            </marquee>
+        </div>
+    </div>
+    
+
+    <div class="gallery">
+        <div class="container">
+            <h1>Point the mouse on the photo & click on the photo in word!</h1>
+            <div class="container-img">
+                <span data-tooltip=""><a href="img/gallery/bird1.jpg" data-lightbox="mygallery"><img src="img/gallery/bird1.jpg"></a></span>
+                <span data-tooltip=""><a href="img/gallery/bird2.jpg" data-lightbox="mygallery"><img src="img/gallery/bird2.jpg"></a></span>
+                <span data-tooltip=""><a href="img/gallery/bird3.jpg" data-lightbox="mygallery"><img src="img/gallery/bird3.jpg"></a></span>
+                <span data-tooltip=""><a href="img/gallery/bird4.jpg" data-lightbox="mygallery"><img src="img/gallery/bird4.jpg"></a></span>
+                <span data-tooltip=""><a href="img/gallery/bird5.jpg" data-lightbox="mygallery"><img src="img/gallery/bird5.jpg"></a></span>
+                <span data-tooltip=""><a href="img/gallery/bird6.jpg" data-lightbox="mygallery"><img src="img/gallery/bird6.jpg"></a></span>
+                <span data-tooltip=""><a href="img/gallery/bird7.jpg" data-lightbox="mygallery"><img src="img/gallery/bird7.jpg"></a></span>
+                <span data-tooltip=""><a href="img/gallery/bird8.jpg.jpg" data-lightbox="mygallery"><img src="img/gallery/bird8.jpg"></a></span>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="container ">
+            <p>Copyright © 2020 | <a href="#">Team</a> All rights reserved.</p>
         </div>
     </div>
 </body>
