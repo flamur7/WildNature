@@ -98,13 +98,6 @@ body {
 }
 
 /* Animals */
-
-#myVideo {
-	object-fit: cover;
-    width: 100%;
-    height: 340px;
-}
-
 .card {
 	margin-bottom: 40px;
 }
