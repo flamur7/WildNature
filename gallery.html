@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,63 +13,59 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/lightbox.min.css">
     <link rel="stylesheet" type="text/css" href="css/forIndex.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
-        integrity="undefined" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" integrity="undefined" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" />
     <script type='text/javascript' src=''></script>
     <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
-    <script type='text/javascript'
-        src='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js'></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
+    <script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js'></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
 </head>
 <script>
-  //DOM load event
-window.addEventListener("DOMContentLoaded",	() => {
-	
-	const cube = document.querySelector(".cube"),
-		  imageButtons = document.querySelector(".image-buttons");
-	let cubeImageClass = cube.classList[1];
+    //DOM load event
+    window.addEventListener("DOMContentLoaded", () => {
 
-	//Add click event listener to image buttons container
-	imageButtons.addEventListener("click", e => {
-		
-		//Get node type and class value of clicked element
-		const targetNode = e.target.nodeName,
-			  targetClass = e.target.className;
+        const cube = document.querySelector(".cube"),
+            imageButtons = document.querySelector(".image-buttons");
+        let cubeImageClass = cube.classList[1];
 
-		//Check if image input has been clicked and isn't the currently shown image
-		if (targetNode === "INPUT" && targetClass !== cubeImageClass) {
-			
-			console.log(`Show Image: ${targetClass.charAt(11)}`);
+        //Add click event listener to image buttons container
+        imageButtons.addEventListener("click", e => {
 
-			//Replace previous cube image class with new class
-			cube.classList.replace(cubeImageClass, targetClass);
+            //Get node type and class value of clicked element
+            const targetNode = e.target.nodeName,
+                targetClass = e.target.className;
 
-			//Update cube image class variable with new class
-			cubeImageClass = targetClass;	
-			
-		}
-		
-	});
-	
-});
+            //Check if image input has been clicked and isn't the currently shown image
+            if (targetNode === "INPUT" && targetClass !== cubeImageClass) {
 
+                console.log(`Show Image: ${targetClass.charAt(11)}`);
+
+                //Replace previous cube image class with new class
+                cube.classList.replace(cubeImageClass, targetClass);
+
+                //Update cube image class variable with new class
+                cubeImageClass = targetClass;
+
+            }
+
+        });
+
+    });
 </script>
+
 <body>
     <div id="header" class="flex">
         <div class="container flex">
             <div class="logo">
-                <img class="flex" src="img/logo.PNG">
+                <a href="index.html">
+                    <img class="flex" src="img/logo.PNG">
+                </a>
             </div>
             <div class="menu">
                 <ul>
@@ -94,10 +91,12 @@ window.addEventListener("DOMContentLoaded",	() => {
             </div>
         </div>
     </div>
-    
+
     <div class="gallery">
-        <div class="container"><hr>
-            <h1>Point the mouse on the photo & click on the photo in word!</h1><hr>
+        <div class="container">
+            <hr>
+            <h1>Point the mouse on the photo & click on the photo in word!</h1>
+            <hr>
             <div class="container-img">
                 <span data-tooltip=""><a href="img/gallery/1.jpg" data-lightbox="mygallery"><img src="img/gallery/1.1.jpg"></a></span>
                 <span data-tooltip=""><a href="img/gallery/2.jpg" data-lightbox="mygallery"><img src="img/gallery/2.1.jpg"></a></span>
@@ -112,274 +111,257 @@ window.addEventListener("DOMContentLoaded",	() => {
             </div>
         </div>
     </div>
-    
+
 
     <!-- Gallery -->
-    
-      
-      <div class="row" style="background-color: black; margin: 1px 0 0 0;">
-        
+
+
+    <div class="row" style="background-color: black; margin: 1px 0 0 0;">
+
         <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-          <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg"
-            class="w-100 shadow-1-strong rounded mb-4" alt="" />
-    
-          <img src="https://mdbootstrap.com/img/Photos/Vertical/mountain1.jpg" class="w-100 shadow-1-strong rounded mb-4"
-            alt="" />
+            <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg" class="w-100 shadow-1-strong rounded mb-4" alt="" />
+
+            <img src="https://mdbootstrap.com/img/Photos/Vertical/mountain1.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="" />
         </div>
-    
+
         <div class="col-lg-4 mb-4 mb-lg-0">
-          <img src="https://mdbootstrap.com/img/Photos/Vertical/mountain2.jpg" class="w-100 shadow-1-strong rounded mb-4"
-            alt="" />
-    
-          <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg"
-            class="w-100 shadow-1-strong rounded mb-4" alt="" />
+            <img src="https://mdbootstrap.com/img/Photos/Vertical/mountain2.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="" />
+
+            <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg" class="w-100 shadow-1-strong rounded mb-4" alt="" />
         </div>
-    
+
         <div class="col-lg-4 mb-4 mb-lg-0">
-          <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
-            class="w-100 shadow-1-strong rounded mb-4" alt="" />
-    
-          <img src="https://mdbootstrap.com/img/Photos/Vertical/mountain3.jpg" class="w-100 shadow-1-strong rounded mb-4"
-            alt="" />
+            <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" class="w-100 shadow-1-strong rounded mb-4" alt="" />
+
+            <img src="https://mdbootstrap.com/img/Photos/Vertical/mountain3.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="" />
         </div>
-      </div>
     </div>
-    
-<!-- Gallery -->
-
-<div class="3DcubeBG" style="background-color: black;">
-  <div class="container"><hr style="padding: 55px;";>
-    <div class="cube-container">
-
-      <div class="cube initial-position">
-
-        <img class="cube-face-image image-1"
-          src="../WildNature/img/Box1.jpg" style="height: 200px; height: 220px;">
-
-        <img class="cube-face-image image-2"
-          src="../WildNature/img/Box6.jpg" style="height: 200px; height: 220px;">
-
-        <img class="cube-face-image image-3"
-          src="../WildNature/img/Box8.jpg" style="height: 200px; height: 220px;">
-
-        <img class="cube-face-image image-4"
-          src="../WildNature/img/Box7.jpg" style="height: 200px; height: 220px;">
-
-        <img class="cube-face-image image-5"
-          src="../WildNature/img/Box3.jpg" style="height: 200px; height: 220px;">
-
-        <img class="cube-face-image image-6"
-          src="../WildNature/img/Box9.jpg" style="height: 200px; height: 220px;">
-
-      </div>
-
     </div>
-    <h2 style="color: white; text-align: center;">Click the images below to rotate the cube</h2>
 
-    <div class="image-buttons">
+    <!-- Gallery -->
 
-      <input type="image" class="show-image-1"
-        src="../WildNature/img/Box1.jpg" style="height: 100px; height: 100px;"></input>
+    <div class="3DcubeBG" style="background-color: black;">
+        <div class="container">
+            <hr style="padding: 55px;" ;>
+            <div class="cube-container">
 
-      <input type="image" class="show-image-2"
-        src="../WildNature/img/Box6.jpg" style="height: 100px; height: 100px;"></input>
+                <div class="cube initial-position">
 
-      <input type="image" class="show-image-3"
-        src="../WildNature/img/Box8.jpg" style="height: 100px; height: 100px;"></input>
+                    <img class="cube-face-image image-1" src="../WildNature/img/Box1.jpg" style="height: 200px; height: 220px;">
 
-      <input type="image" class="show-image-4"
-        src="../WildNature/img/Box7.jpg" style="height: 100px; height: 100px;"></input>
+                    <img class="cube-face-image image-2" src="../WildNature/img/Box6.jpg" style="height: 200px; height: 220px;">
 
-      <input type="image" class="show-image-5"
-        src="../WildNature/img/Box3.jpg" style="height: 100px; height: 100px;"></input>
+                    <img class="cube-face-image image-3" src="../WildNature/img/Box8.jpg" style="height: 200px; height: 220px;">
 
-      <input type="image" class="show-image-6"
-        src="../WildNature/img/Box9.jpg" style="height: 100px; height: 100px;"></input>
+                    <img class="cube-face-image image-4" src="../WildNature/img/Box7.jpg" style="height: 200px; height: 220px;">
 
+                    <img class="cube-face-image image-5" src="../WildNature/img/Box3.jpg" style="height: 200px; height: 220px;">
+
+                    <img class="cube-face-image image-6" src="../WildNature/img/Box9.jpg" style="height: 200px; height: 220px;">
+
+                </div>
+
+            </div>
+            <h2 style="color: white; text-align: center;">Click the images below to rotate the cube</h2>
+
+            <div class="image-buttons">
+
+                <input type="image" class="show-image-1" src="../WildNature/img/Box1.jpg" style="height: 100px; height: 100px;"></input>
+
+                <input type="image" class="show-image-2" src="../WildNature/img/Box6.jpg" style="height: 100px; height: 100px;"></input>
+
+                <input type="image" class="show-image-3" src="../WildNature/img/Box8.jpg" style="height: 100px; height: 100px;"></input>
+
+                <input type="image" class="show-image-4" src="../WildNature/img/Box7.jpg" style="height: 100px; height: 100px;"></input>
+
+                <input type="image" class="show-image-5" src="../WildNature/img/Box3.jpg" style="height: 100px; height: 100px;"></input>
+
+                <input type="image" class="show-image-6" src="../WildNature/img/Box9.jpg" style="height: 100px; height: 100px;"></input>
+
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 
 
     <!-- Footer -->
-<footer class="bg-dark text-center text-white">
-    <!-- Grid container -->
-    <div class="container p-4">
-      <!-- Section: Social media -->
-      <section class="mb-4">
-        <!-- Facebook -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-facebook-f"></i
+    <footer class="bg-dark text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i
         ></a>
-  
-        <!-- Twitter -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-twitter"></i
+
+                <!-- Twitter -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i
         ></a>
-  
-        <!-- Google -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-google"></i
+
+                <!-- Google -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i
         ></a>
-  
-        <!-- Instagram -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-instagram"></i
+
+                <!-- Instagram -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i
         ></a>
-  
-        <!-- Linkedin -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-linkedin-in"></i
+
+                <!-- Linkedin -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i
         ></a>
-  
-        <!-- Github -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-github"></i
+
+                <!-- Github -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i
         ></a>
-      </section>
-      <!-- Section: Social media -->
-  
-      <!-- Section: Form -->
-      <section class="">
-        <form action="">
-          <!--Grid row-->
-          <div class="row d-flex justify-content-center">
-            <!--Grid column-->
-            <div class="col-auto">
-              <p class="pt-2">
-                <strong>Sign up for our newsletter</strong>
-              </p>
-            </div>
-            <!--Grid column-->
-  
-            <!--Grid column-->
-            <div class="col-md-5 col-12">
-              <!-- Email input -->
-              <div class="form-outline form-white mb-4">
-                <input type="email" id="form5Example2" class="form-control" />
-                <label class="form-label" for="form5Example2">Email address</label>
-              </div>
-            </div>
-            <!--Grid column-->
-  
-            <!--Grid column-->
-            <div class="col-auto">
-              <!-- Submit button -->
-              <button type="submit" class="btn btn-outline-light mb-4">
+            </section>
+            <!-- Section: Social media -->
+
+            <!-- Section: Form -->
+            <section class="">
+                <form action="">
+                    <!--Grid row-->
+                    <div class="row d-flex justify-content-center">
+                        <!--Grid column-->
+                        <div class="col-auto">
+                            <p class="pt-2">
+                                <strong>Sign up for our newsletter</strong>
+                            </p>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-md-5 col-12">
+                            <!-- Email input -->
+                            <div class="form-outline form-white mb-4">
+                                <input type="email" id="form5Example2" class="form-control" />
+                                <label class="form-label" for="form5Example2">Email address</label>
+                            </div>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-auto">
+                            <!-- Submit button -->
+                            <button type="submit" class="btn btn-outline-light mb-4">
                 Subscribe
               </button>
-            </div>
-            <!--Grid column-->
-          </div>
-          <!--Grid row-->
-        </form>
-      </section>
-      <!-- Section: Form -->
-  
-      <!-- Section: Text -->
-      <section class="mb-4">
-        
-      </section>
-      <!-- Section: Text -->
-  
-      <!-- Section: Links -->
-      <section class="">
-        <!--Grid row-->
-        <div class="row">
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Links</h5><hr>
-  
-            <ul class="list-unstyled mb-0">
-              <li>
-                <a href="#!" class="text-white">Animals</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Plants</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Birds</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Gallery</a>
-              </li>
-            </ul>
-          </div>
-          <!--Grid column-->
-  
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Gallery</h5><hr>
-  
-            <ul class="list-unstyled mb-0">
-              <li>
-                <a href="#!" class="text-white">Nature</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Animals</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Wild Life</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">HD photos</a>
-              </li>
-            </ul>
-          </div>
-          <!--Grid column-->
-  
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Contact</h5><hr>
-  
-            <ul class="list-unstyled mb-0">
-              <li>
-                <a href="#!" class="text-white">wildnature@gmail.com</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">+383 44 924 579</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Rr.Kalabria</a>
-              </li>
-            </ul>
-          </div>
-          <!--Grid column-->
-  
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Team</h5><hr>
-  
-            <ul class="list-unstyled mb-0">
-              <li>
-                <a href="#!" class="text-white">Flamur Gashi</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Valentina Neziri</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Arta Hyseni</a>
-              </li>
-              <li><hr>
-                <a href="#!" class="text-white">MSC.Betim Gashi</a>
-              </li>
-            </ul>
-          </div>
-          <!--Grid column-->
+                        </div>
+                        <!--Grid column-->
+                    </div>
+                    <!--Grid row-->
+                </form>
+            </section>
+            <!-- Section: Form -->
+
+            <!-- Section: Text -->
+            <section class="mb-4">
+
+            </section>
+            <!-- Section: Text -->
+
+            <!-- Section: Links -->
+            <section class="">
+                <!--Grid row-->
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Links</h5>
+                        <hr>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="text-white">Animals</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Plants</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Birds</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Gallery</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Gallery</h5>
+                        <hr>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="text-white">Nature</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Animals</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Wild Life</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">HD photos</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Contact</h5>
+                        <hr>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="text-white">wildnature@gmail.com</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">+383 44 924 579</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Rr.Kalabria</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Team</h5>
+                        <hr>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="text-white">Flamur Gashi</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Valentina Neziri</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Arta Hyseni</a>
+                            </li>
+                            <li>
+                                <hr>
+                                <a href="#!" class="text-white">MSC.Betim Gashi</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+            </section>
+            <!-- Section: Links -->
         </div>
-        <!--Grid row-->
-      </section>
-      <!-- Section: Links -->
-    </div>
-    <!-- Grid container -->
-  
-    <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      © 2021 Copyright:
-      <a class="text-white" href="https://mdbootstrap.com/">WildNature.com</a>
-    </div>
-    <!-- Copyright -->
-  </footer>
-  <!-- Footer -->
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2021 Copyright:
+            <a class="text-white" href="https://mdbootstrap.com/">WildNature.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
 </body>
+
 </html>
