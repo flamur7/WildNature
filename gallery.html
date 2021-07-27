@@ -29,7 +29,41 @@
         src='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js'></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
 </head>
+<script>
+  //DOM load event
+window.addEventListener("DOMContentLoaded",	() => {
+	
+	const cube = document.querySelector(".cube"),
+		  imageButtons = document.querySelector(".image-buttons");
+	let cubeImageClass = cube.classList[1];
+
+	//Add click event listener to image buttons container
+	imageButtons.addEventListener("click", e => {
+		
+		//Get node type and class value of clicked element
+		const targetNode = e.target.nodeName,
+			  targetClass = e.target.className;
+
+		//Check if image input has been clicked and isn't the currently shown image
+		if (targetNode === "INPUT" && targetClass !== cubeImageClass) {
+			
+			console.log(`Show Image: ${targetClass.charAt(11)}`);
+
+			//Replace previous cube image class with new class
+			cube.classList.replace(cubeImageClass, targetClass);
+
+			//Update cube image class variable with new class
+			cubeImageClass = targetClass;	
+			
+		}
+		
+	});
+	
+});
+
+</script>
 <body>
     <div id="header" class="flex">
         <div class="container flex">
@@ -53,39 +87,118 @@
                     <a href="gallery.html">
                         <li class="selected">Gallery</li>
                     </a>
-                    <a href="about.html">
+                    <a href="contact.html">
                         <li>About</li>
                     </a>
                 </ul>
             </div>
         </div>
     </div>
-
-    <div id="content">
-        <div class="hije-top" style="opacity: 50%;">
-            <marquee scrollamount="10" direction="left">
-                <p style="font-size: larger;font-style: italic;font-weight: bold;">Wild true, but it's best part of the world! Enjoy the time on our website</p>       
-            </marquee>
-        </div>
-    </div>
     
-
     <div class="gallery">
-        <div class="container">
-            <h1>Point the mouse on the photo & click on the photo in word!</h1>
+        <div class="container"><hr>
+            <h1>Point the mouse on the photo & click on the photo in word!</h1><hr>
             <div class="container-img">
-                <span data-tooltip="WILD!"><a href="img/gallery/1.jpg" data-lightbox="mygallery"><img src="img/gallery/1.1.jpg"></a></span>
-                <span data-tooltip="WILD!"><a href="img/gallery/2.jpg" data-lightbox="mygallery"><img src="img/gallery/2.1.jpg"></a></span>
-                <span data-tooltip="WILD!"><a href="img/gallery/3.jpg" data-lightbox="mygallery"><img src="img/gallery/3.1.jpg"></a></span>
-                <span data-tooltip="WILD!"><a href="img/gallery/4.jpg" data-lightbox="mygallery"><img src="img/gallery/4.1.jpg"></a></span>
-                <span data-tooltip="WILD!"><a href="img/gallery/5.jpg" data-lightbox="mygallery"><img src="img/gallery/5.1.jpg"></a></span>
-                <span data-tooltip="WILD!"><a href="img/gallery/6.jpg" data-lightbox="mygallery"><img src="img/gallery/6.1.jpg"></a></span>
-                <span data-tooltip="WILD!"><a href="img/gallery/7.jpg" data-lightbox="mygallery"><img src="img/gallery/7.1.jpg"></a></span>
-                <span data-tooltip="WILD!"><a href="img/gallery/8.jpg" data-lightbox="mygallery"><img src="img/gallery/8.1.jpg"></a></span>
+                <span data-tooltip=""><a href="img/gallery/1.jpg" data-lightbox="mygallery"><img src="img/gallery/1.1.jpg"></a></span>
+                <span data-tooltip=""><a href="img/gallery/2.jpg" data-lightbox="mygallery"><img src="img/gallery/2.1.jpg"></a></span>
+                <span data-tooltip=""><a href="img/gallery/3.jpg" data-lightbox="mygallery"><img src="img/gallery/3.1.jpg"></a></span>
+                <span data-tooltip=""><a href="img/gallery/4.jpg" data-lightbox="mygallery"><img src="img/gallery/4.1.jpg"></a></span>
+                <span data-tooltip=""><a href="img/gallery/5.jpg" data-lightbox="mygallery"><img src="img/gallery/5.1.jpg"></a></span>
+                <span data-tooltip=""><a href="img/gallery/6.jpg" data-lightbox="mygallery"><img src="img/gallery/6.1.jpg"></a></span>
+                <span data-tooltip=""><a href="img/gallery/7.jpg" data-lightbox="mygallery"><img src="img/gallery/7.1.jpg"></a></span>
+                <span data-tooltip=""><a href="img/gallery/8.jpg" data-lightbox="mygallery"><img src="img/gallery/8.1.jpg"></a></span>
+                <span data-tooltip=""><a href="img/gallery/1.jpg" data-lightbox="mygallery"><img src="img/gallery/1.1.jpg"></a></span>
+                <span data-tooltip=""><a href="img/gallery/2.jpg" data-lightbox="mygallery"><img src="img/gallery/2.1.jpg"></a></span>
             </div>
         </div>
     </div>
     
+
+    <!-- Gallery -->
+    
+      
+      <div class="row" style="background-color: black; margin: 1px 0 0 0;">
+        
+        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+          <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg"
+            class="w-100 shadow-1-strong rounded mb-4" alt="" />
+    
+          <img src="https://mdbootstrap.com/img/Photos/Vertical/mountain1.jpg" class="w-100 shadow-1-strong rounded mb-4"
+            alt="" />
+        </div>
+    
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <img src="https://mdbootstrap.com/img/Photos/Vertical/mountain2.jpg" class="w-100 shadow-1-strong rounded mb-4"
+            alt="" />
+    
+          <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg"
+            class="w-100 shadow-1-strong rounded mb-4" alt="" />
+        </div>
+    
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
+            class="w-100 shadow-1-strong rounded mb-4" alt="" />
+    
+          <img src="https://mdbootstrap.com/img/Photos/Vertical/mountain3.jpg" class="w-100 shadow-1-strong rounded mb-4"
+            alt="" />
+        </div>
+      </div>
+    </div>
+    
+<!-- Gallery -->
+
+<div class="3DcubeBG" style="background-color: black;">
+  <div class="container"><hr style="padding: 55px;";>
+    <div class="cube-container">
+
+      <div class="cube initial-position">
+
+        <img class="cube-face-image image-1"
+          src="../WildNature/img/Box1.jpg" style="height: 200px; height: 220px;">
+
+        <img class="cube-face-image image-2"
+          src="../WildNature/img/Box6.jpg" style="height: 200px; height: 220px;">
+
+        <img class="cube-face-image image-3"
+          src="../WildNature/img/Box8.jpg" style="height: 200px; height: 220px;">
+
+        <img class="cube-face-image image-4"
+          src="../WildNature/img/Box7.jpg" style="height: 200px; height: 220px;">
+
+        <img class="cube-face-image image-5"
+          src="../WildNature/img/Box3.jpg" style="height: 200px; height: 220px;">
+
+        <img class="cube-face-image image-6"
+          src="../WildNature/img/Box9.jpg" style="height: 200px; height: 220px;">
+
+      </div>
+
+    </div>
+    <h2 style="color: white; text-align: center;">Click the images below to rotate the cube</h2>
+
+    <div class="image-buttons">
+
+      <input type="image" class="show-image-1"
+        src="../WildNature/img/Box1.jpg" style="height: 100px; height: 100px;"></input>
+
+      <input type="image" class="show-image-2"
+        src="../WildNature/img/Box6.jpg" style="height: 100px; height: 100px;"></input>
+
+      <input type="image" class="show-image-3"
+        src="../WildNature/img/Box8.jpg" style="height: 100px; height: 100px;"></input>
+
+      <input type="image" class="show-image-4"
+        src="../WildNature/img/Box7.jpg" style="height: 100px; height: 100px;"></input>
+
+      <input type="image" class="show-image-5"
+        src="../WildNature/img/Box3.jpg" style="height: 100px; height: 100px;"></input>
+
+      <input type="image" class="show-image-6"
+        src="../WildNature/img/Box9.jpg" style="height: 100px; height: 100px;"></input>
+
+    </div>
+  </div>
+</div>
 
 
     <!-- Footer -->
