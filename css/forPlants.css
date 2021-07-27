@@ -493,3 +493,7 @@ Pixel Grid
     background: linear-gradient(135deg, #289cf5, #84c0ec) !important;
     color: #fff;
 }
+
+.news-row .news-block {
+    background-color: #f3f3f4;
+}
