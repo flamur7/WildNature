@@ -74,10 +74,10 @@ body {
 	box-shadow: 0 0px 15px 0px rgba(0, 0, 0, 0.1);
 	background-color: white;
     margin-top: 25px;
-    opacity: 60%;
+    opacity: 40%;
 }
 .content-main:hover{
-    opacity: 100%;
+    opacity: 70%;
 }
 
 .hije-top {
@@ -120,7 +120,7 @@ body {
 	width: 337px;
 	height: 1019px;
     margin-top: 25px;
-    opacity: 60%;
+    opacity: 40%;
 }
 .right-sidebar:hover{
     opacity: 100%;
